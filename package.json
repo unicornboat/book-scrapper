@@ -1,0 +1,19 @@
+{
+  "name": "book-scrapper",
+  "version": "1.0.0",
+  "description": "Scrape book websites",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unicornboat/book-scrapper.git"
+  },
+  "author": "UnicornBoat",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/unicornboat/book-scrapper/issues"
+  },
+  "homepage": "https://github.com/unicornboat/book-scrapper#readme"
+}

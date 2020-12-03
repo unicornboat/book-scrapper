@@ -1,0 +1,11 @@
+{
+	"c083e906882947cd74563300eadcc257": {
+		"domain": "https://riptutorial.com",
+		"categories": [
+			{
+				"selector": ".section-sidebar .section-sidebar-overflow a:not([href=\"/javascript/topic/185/getting-started-with-javascript\"])",
+				"uri": "/javascript"
+			}
+		]
+	}
+}

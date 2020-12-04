@@ -2,9 +2,10 @@
 	"name": "book-scrapper",
 	"version": "1.0.0",
 	"description": "Scrape book websites",
-	"main": "index.js",
+	"main": "fetch.js",
 	"scripts": {
-		"dev": "node index.js"
+		"fetch": "node fetch.js",
+		"dbreset": "node db/reset.js"
 	},
 	"repository": {
 		"type": "git",
@@ -18,8 +19,9 @@
 	"homepage": "https://github.com/unicornboat/book-scrapper#readme",
 	"dependencies": {
 		"axios": "^0.21.0",
-		"cheerio": "^1.0.0-rc.3",
 		"dotenv": "^8.2.0",
-		"iconv-lite": "^0.6.2"
+		"iconv-lite": "^0.6.2",
+		"jsdom": "^16.4.0",
+		"mysql": "^2.18.1"
 	}
 }

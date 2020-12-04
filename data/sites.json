@@ -1,7 +1,0 @@
-[
-	{
-		"domain": "http://www.ybdu.co",
-		"mainPage": "/",
-		"categorySelector": ".nav .navitem a"
-	}
-]

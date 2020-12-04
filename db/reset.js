@@ -13,28 +13,38 @@ const pre_data = {
 			'`category_item_selector` varchar(255) DEFAULT NULL, ' +
 			'`category_first_item_selector` varchar(255) DEFAULT NULL, ' +
 			'`category_last_item_selector` varchar(255) DEFAULT NULL, ' +
+			'`category_item_template` varchar(255) DEFAULT NULL, ' +
 			'PRIMARY KEY (`id`), ' +
-			'KEY `name` (`name`,`domain`) ' +
+			'KEY `name_protocol_domain` (`name`,`protocol`,`domain`) ' +
 			') ENGINE=InnoDB AUTO_INCREMENT=100000 DEFAULT CHARSET=utf8mb4;',
 		rows: [
 			{
 				name: 'w3schools',
 				domain: 'www.w3schools.com',
 				protocol: 'https://',
-				category_selector: '#mySidenav .w3-bar-item'
+				encode: 'utf8',
+				category_selector: '#mySidenav .w3-bar-item',
+				category_first_item_selector: null,
+				category_last_item_selector: null,
+				category_item_template: null
 			},
-			// {
-			// 	name: '全本小说',
-			// 	domain: 'www.ybdu.co',
-			// 	category_selector: '.nav .navitem a'
-			// }
+			{
+				name: '全本小说网',
+				domain: 'www.ybdu.co',
+				protocol: 'http://',
+				encode: 'gbk',
+				category_selector: 'ul.nav .navitem[nav^="cat_"] a',
+				category_first_item_selector: 'ul.pagination li:nth-child(3) a',
+				category_last_item_selector: 'ul.pagination li:last-child a',
+				category_item_template: '/list/%p-%c.html'
+			}
 		]
 	},
 	bs_categories: {
 		create: 'CREATE TABLE ?? ( ' +
 			'`id` bigint(20) unsigned NOT NULL AUTO_INCREMENT, ' +
 			'`site_id` bigint(20) NOT NULL, ' +
-			'`name` varchar(255) NOT NULL, ' +
+			'`name` varchar(255) DEFAULT NULL, ' +
 			'`uri` varchar(255) NOT NULL, ' +
 			'PRIMARY KEY (`id`) ' +
 			') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;'

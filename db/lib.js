@@ -92,12 +92,9 @@ app.findAll = function (table, conditions = []) {
 };
 
 app.upsert = function (table, data, conditions = {}) {
-	let columns, payload = [], row = null;
+	let columns, row = null;
 	return new Promise(async function (resolve, reject) {
-		if (typeof data === 'object' && data.constructor === Object) {
-			columns = Object.keys(data);
-			payload.push(Object.values(data));
-		} else {
+		if (typeof data !== 'object' || data.constructor !== Object) {
 			reject('Data type should be Object. "' + typeof data + '" is given.');
 			return;
 		}
@@ -106,17 +103,20 @@ app.upsert = function (table, data, conditions = {}) {
 			row = await app.find(table, conditions);
 		}
 
-		if (!row) {
-			let sql = mysql.format('INSERT INTO ?? SET ?', [table, data]);
-			connection.query('INSERT INTO ?? SET ?', function (err, rows) {
-				if (err) {
-					reject(err);
-					return;
-				}
-				resolve(rows.affectedRows);
-			});
+		if (row) {
+			resolve(row.id);
+			return;
 		}
-		resolve(sql);
+
+		let sql = mysql.format('INSERT INTO ?? SET ?', [table, data]);
+		console.log(sql);
+		connection.query(sql, function (err, rows) {
+			if (err) {
+				reject(err);
+				return;
+			}
+			resolve(rows.insertId);
+		});
 	});
 };
 

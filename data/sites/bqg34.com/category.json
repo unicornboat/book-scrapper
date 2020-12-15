@@ -1,0 +1,79 @@
+{
+	"name": "title",
+	"url": "https://www.bqg34.com/",
+	"bookList": ".left_cont .gx_cont li:not(.li_one) a[title]",
+	"categories": [
+		{
+			"name": "玄幻小说",
+			"prefix": "https://www.bqg34.com/fenlei/1_",
+			"suffix": "/",
+			"first": ".pagelink a.first",
+			"last": ".pagelink a.last",
+			"url": "https://www.bqg34.com/fenlei/1_1/"
+		},
+		{
+			"name": "修真小说",
+			"prefix": "https://www.bqg34.com/fenlei/2_",
+			"suffix": "/",
+			"first": ".pagelink a.first",
+			"last": ".pagelink a.last",
+			"url": "https://www.bqg34.com/fenlei/2_1/"
+		},
+		{
+			"name": "都市小说",
+			"prefix": "https://www.bqg34.com/fenlei/3_",
+			"suffix": "/",
+			"first": ".pagelink a.first",
+			"last": ".pagelink a.last",
+			"url": "https://www.bqg34.com/fenlei/3_1/"
+		},
+		{
+			"name": "历史小说",
+			"prefix": "https://www.bqg34.com/fenlei/4_",
+			"suffix": "/",
+			"first": ".pagelink a.first",
+			"last": ".pagelink a.last",
+			"url": "https://www.bqg34.com/fenlei/4_1/"
+		},
+		{
+			"name": "网游小说",
+			"prefix": "https://www.bqg34.com/fenlei/5_",
+			"first": ".pagelink a.first",
+			"last": ".pagelink a.last",
+			"suffix": "/",
+			"url": "https://www.bqg34.com/fenlei/5_1/"
+		},
+		{
+			"name": "科幻小说",
+			"prefix": "https://www.bqg34.com/fenlei/6_",
+			"suffix": "/",
+			"first": ".pagelink a.first",
+			"last": ".pagelink a.last",
+			"url": "https://www.bqg34.com/fenlei/6_1/"
+		},
+		{
+			"name": "恐怖小说",
+			"prefix": "https://www.bqg34.com/fenlei/7_",
+			"suffix": "/",
+			"first": ".pagelink a.first",
+			"last": ".pagelink a.last",
+			"url": "https://www.bqg34.com/fenlei/8_1/"
+		},
+		{
+			"name": "其他小说",
+			"prefix": "https://www.bqg34.com/fenlei/8_",
+			"suffix": "/",
+			"first": ".pagelink a.first",
+			"last": ".pagelink a.last",
+			"url": "https://www.bqg34.com/fenlei/8_1/"
+		},
+		{
+			"name": "完本小说",
+			"prefix": "https://www.bqg34.com/quanben/",
+			"suffix": "",
+			"first": ".pagelink a.first",
+			"last": ".pagelink a.last",
+			"url": "https://www.bqg34.com/quanben/"
+		}
+	]
+}
